@@ -14,10 +14,26 @@
     "views": [],
     "repositories": [],
     "menuSections": [
-      { "id": "patrimonio", "label": "Patrimonio", "order": 10 },
-      { "id": "alquileres", "label": "Alquileres", "order": 20 },
-      { "id": "cobranza", "label": "Cobranza", "order": 30 },
-      { "id": "operacion", "label": "Operación", "order": 40 }
+      {
+        "id": "patrimonio",
+        "label": "Patrimonio",
+        "order": 10
+      },
+      {
+        "id": "alquileres",
+        "label": "Alquileres",
+        "order": 20
+      },
+      {
+        "id": "cobranza",
+        "label": "Cobranza",
+        "order": 30
+      },
+      {
+        "id": "operacion",
+        "label": "Operación",
+        "order": 40
+      }
     ],
     "menuAssignments": [
       {
@@ -73,6 +89,12 @@
         "path": "Mantenimiento",
         "section": "operacion",
         "order": 10
+      },
+      {
+        "pluginId": "@coongro/leases",
+        "path": "Vencimientos",
+        "section": "operacion",
+        "order": 20
       }
     ],
     "copilotCapabilities": []
