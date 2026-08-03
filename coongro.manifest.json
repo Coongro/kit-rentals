@@ -34,6 +34,12 @@
       },
       {
         "pluginId": "@coongro/leases",
+        "path": "Resultado",
+        "section": "patrimonio",
+        "order": 30
+      },
+      {
+        "pluginId": "@coongro/leases",
         "path": "Inquilinos",
         "section": "alquileres",
         "order": 10
