@@ -62,18 +62,8 @@
         "section": "cobranza",
         "order": 20
       },
-      {
-        "pluginId": "@coongro/billing",
-        "path": "Cobros",
-        "section": "cobranza",
-        "order": 30
-      },
-      {
-        "pluginId": "@coongro/billing",
-        "path": "Caja",
-        "section": "cobranza",
-        "order": 40
-      },
+      { "pluginId": "@coongro/billing", "path": "Cobros", "hidden": true },
+      { "pluginId": "@coongro/billing", "path": "Caja", "hidden": true },
       {
         "pluginId": "@coongro/maintenance",
         "path": "Mantenimiento",
