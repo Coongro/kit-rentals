@@ -34,6 +34,12 @@
       },
       {
         "pluginId": "@coongro/leases",
+        "path": "Resultado",
+        "section": "patrimonio",
+        "order": 30
+      },
+      {
+        "pluginId": "@coongro/leases",
         "path": "Inquilinos",
         "section": "alquileres",
         "order": 10
@@ -56,23 +62,19 @@
         "section": "cobranza",
         "order": 20
       },
-      {
-        "pluginId": "@coongro/billing",
-        "path": "Cobros",
-        "section": "cobranza",
-        "order": 30
-      },
-      {
-        "pluginId": "@coongro/billing",
-        "path": "Caja",
-        "section": "cobranza",
-        "order": 40
-      },
+      { "pluginId": "@coongro/billing", "path": "Cobros", "hidden": true },
+      { "pluginId": "@coongro/billing", "path": "Caja", "hidden": true },
       {
         "pluginId": "@coongro/maintenance",
         "path": "Mantenimiento",
         "section": "operacion",
         "order": 10
+      },
+      {
+        "pluginId": "@coongro/leases",
+        "path": "Vencimientos",
+        "section": "operacion",
+        "order": 20
       }
     ],
     "copilotCapabilities": []
