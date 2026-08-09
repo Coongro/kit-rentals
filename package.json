@@ -1,6 +1,6 @@
 {
   "name": "@coongro/kit-rentals",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "type": "module",
   "description": "Kit de gestión de alquileres para propietarios particulares: propiedades y unidades, contratos, cobranza mes a mes, actualizaciones por índice y mantenimiento. Agrupa los plugins del kit y organiza sus menús.",
   "main": "dist/index.js",
