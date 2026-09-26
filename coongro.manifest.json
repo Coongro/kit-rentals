@@ -14,26 +14,10 @@
     "views": [],
     "repositories": [],
     "menuSections": [
-      {
-        "id": "patrimonio",
-        "label": "Patrimonio",
-        "order": 10
-      },
-      {
-        "id": "alquileres",
-        "label": "Alquileres",
-        "order": 20
-      },
-      {
-        "id": "cobranza",
-        "label": "Cobranza",
-        "order": 30
-      },
-      {
-        "id": "operacion",
-        "label": "Operación",
-        "order": 40
-      }
+      { "id": "patrimonio", "label": "Patrimonio", "order": 10 },
+      { "id": "alquileres", "label": "Alquileres", "order": 20 },
+      { "id": "cobranza", "label": "Cobranza", "order": 30 },
+      { "id": "operacion", "label": "Operación", "order": 40 }
     ],
     "menuAssignments": [
       {
@@ -78,16 +62,8 @@
         "section": "cobranza",
         "order": 20
       },
-      {
-        "pluginId": "@coongro/billing",
-        "path": "Cobros",
-        "hidden": true
-      },
-      {
-        "pluginId": "@coongro/billing",
-        "path": "Caja",
-        "hidden": true
-      },
+      { "pluginId": "@coongro/billing", "path": "Cobros", "hidden": true },
+      { "pluginId": "@coongro/billing", "path": "Caja", "hidden": true },
       {
         "pluginId": "@coongro/maintenance",
         "path": "Mantenimiento",
@@ -107,6 +83,118 @@
         "order": 30
       }
     ],
-    "copilotCapabilities": []
+    "copilotCapabilities": [],
+    "roles": [
+      {
+        "key": "operacion",
+        "label": "Operación completa",
+        "description": "Usa todo el sistema de alquileres: propiedades, contratos, cobranzas y mantenimiento. No administra usuarios ni plugins.",
+        "permissions": [
+          "leases.adjustments.delete",
+          "leases.adjustments.manage",
+          "leases.adjustments.read",
+          "leases.billing.manage",
+          "leases.billing.read",
+          "leases.charges.delete",
+          "leases.charges.manage",
+          "leases.charges.read",
+          "leases.contracts.delete",
+          "leases.contracts.manage",
+          "leases.contracts.read",
+          "leases.coTenants.delete",
+          "leases.coTenants.manage",
+          "leases.coTenants.read",
+          "leases.expiries.manage",
+          "leases.expiries.read",
+          "leases.guarantees.delete",
+          "leases.guarantees.manage",
+          "leases.guarantees.read",
+          "properties.buildingExpenses.delete",
+          "properties.buildingExpenses.manage",
+          "properties.buildingExpenses.read",
+          "properties.buildings.delete",
+          "properties.buildings.manage",
+          "properties.buildings.read",
+          "properties.certificates.delete",
+          "properties.certificates.manage",
+          "properties.certificates.read",
+          "properties.unitOwners.delete",
+          "properties.unitOwners.manage",
+          "properties.unitOwners.read",
+          "properties.units.delete",
+          "properties.units.manage",
+          "properties.units.read",
+          "indices.fx.read",
+          "indices.values.delete",
+          "indices.values.manage",
+          "indices.values.read",
+          "maintenance.workOrders.delete",
+          "maintenance.workOrders.manage",
+          "maintenance.workOrders.read",
+          "billing.accounts.delete",
+          "billing.accounts.manage",
+          "billing.accounts.read",
+          "billing.cashCloses.delete",
+          "billing.cashCloses.manage",
+          "billing.cashCloses.read",
+          "billing.lines.delete",
+          "billing.lines.manage",
+          "billing.lines.read",
+          "billing.payments.delete",
+          "billing.payments.manage",
+          "billing.payments.read",
+          "contacts.delete",
+          "contacts.manage",
+          "contacts.read"
+        ],
+        "default": true
+      },
+      {
+        "key": "consulta",
+        "label": "Consulta",
+        "description": "Ve todo el sistema sin poder cambiar nada.",
+        "permissions": [
+          "leases.adjustments.read",
+          "leases.billing.read",
+          "leases.charges.read",
+          "leases.contracts.read",
+          "leases.coTenants.read",
+          "leases.expiries.read",
+          "leases.guarantees.read",
+          "properties.buildingExpenses.read",
+          "properties.buildings.read",
+          "properties.certificates.read",
+          "properties.unitOwners.read",
+          "properties.units.read",
+          "indices.fx.read",
+          "indices.values.read",
+          "maintenance.workOrders.read",
+          "billing.accounts.read",
+          "billing.cashCloses.read",
+          "billing.lines.read",
+          "billing.payments.read",
+          "contacts.read"
+        ]
+      },
+      {
+        "key": "cobranzas",
+        "label": "Cobranzas",
+        "description": "Cobra alquileres, registra pagos y cierra la caja. Ve todo lo demás sin modificarlo.",
+        "implies": ["consulta"],
+        "permissions": [
+          "leases.billing.manage",
+          "billing.accounts.manage",
+          "billing.lines.manage",
+          "billing.payments.manage",
+          "billing.cashCloses.manage"
+        ]
+      },
+      {
+        "key": "mantenimiento",
+        "label": "Mantenimiento",
+        "description": "Gestiona las órdenes de trabajo de las propiedades. No ve contratos ni cobranzas.",
+        "permissions": ["maintenance.workOrders.manage"]
+      }
+    ]
   }
 }
