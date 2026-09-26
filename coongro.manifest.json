@@ -21,6 +21,12 @@
     ],
     "menuAssignments": [
       {
+        "pluginId": "@coongro/leases",
+        "path": "Panel",
+        "section": "principal",
+        "order": 10
+      },
+      {
         "pluginId": "@coongro/properties",
         "path": "Propiedades",
         "section": "patrimonio",
