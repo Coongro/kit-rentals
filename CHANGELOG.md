@@ -1,5 +1,20 @@
 # @coongro/kit-rentals
 
+## 0.4.0
+
+### Minor Changes
+
+- El kit trae roles para los empleados del negocio
+
+  Cuatro roles combinables (se suman si una persona tiene varios): **Operación completa** (por defecto: todo lo del kit, el que reciben los usuarios que ya existían), **Consulta** (ver sin modificar), **Cobranzas** (consulta más cobrar alquileres y registrar cobros) y **Mantenimiento** (gestionar órdenes de trabajo). Ninguno administra usuarios, plugins ni configuración: eso es del dueño. Los roles se asignan desde la pantalla de Usuarios de Coongro Standalone.
+
+### Patch Changes
+
+- El Panel de alquileres encabeza la sección principal del menú
+
+  El Panel de `leases` no tenía sección asignada en el kit y quedaba suelto en el sidebar. Ahora
+  abre la sección principal, primero.
+
 ## 0.3.0
 
 ### Minor Changes
